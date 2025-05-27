@@ -1,4 +1,14 @@
-# DdosFrontendClean
+Modules Used
+Angular CLI: 19.2.8
+● Node version : v20.10.0
+● Npm Version : 10.7.0
+● Express.js Version : express@4.21.2
+● Backend
+● ├── cors@2.8.5
+● ├── dotenv@16.4.7
+● ├── express@4.21.2
+● ├── mongoose@8.13.0
+● └── nodemon@3.1.9# DdosFrontendClean
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
 
