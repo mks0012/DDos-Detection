@@ -1,0 +1,116 @@
+<div class="container mt-5">
+    <!-- Page Heading -->
+    <h2 class="text-center mb-5 text-primary font-weight-bold display-4">DDoS Detection Dashboard</h2>
+    
+    <!-- Welcome Card -->
+    <div class="card shadow-lg border-0 rounded-lg">
+      <div class="card-body bg-light">
+        <h4 class="card-title text-center text-success font-weight-bold">Welcome to the DDoS Entropy Detection System</h4>
+        <p class="card-text text-center text-muted">
+          Visualize and analyze network traffic data here. 
+          <br />
+          Click "Run Detection" to start the simulation of DDoS detection based on entropy.
+        </p>
+        
+        <!-- Button for running detection -->
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn btn-lg btn-primary shadow-sm" (click)="detectAttack()">Run Detection</button>
+        </div>
+        
+        <!-- Displaying Entropy Value -->
+        <div *ngIf="entropyValue" class="mt-5 text-center">
+          <h3 class="text-info">Current Entropy Value</h3>
+          <p class="display-4 text-dark font-weight-bold" style="font-family: 'Courier New', Courier, monospace; letter-spacing: 2px;">
+            {{ entropyValue.toFixed(4) }}
+          </p>
+        </div>
+  
+        <!-- Entropy info & styling -->
+        <div class="mt-3 text-center">
+          <p *ngIf="entropyValue" class="text-muted">The entropy value reflects the randomness of traffic data.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="mt-5 text-center text-muted">
+      <p>&copy; 2025 DDoS Entropy Detection System | All Rights Reserved</p>
+    </footer>
+</div>
+
+<!-- Styles (Optional Custom Styles) -->
+<style>
+    body {
+        background: linear-gradient(135deg, #6a11cb, #2575fc); /* Dual-color gradient */
+        font-family: 'Arial', sans-serif;
+        color: white;
+        box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    }
+  
+    .card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        border: none;
+    }
+  
+    .card-body {
+        padding: 40px;
+    }
+  
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        font-size: 1.2em;
+        padding: 12px 30px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+  
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .footer {
+        margin-top: 50px;
+        font-size: 0.9em;
+        color: #6c757d;
+    }
+  
+    .text-info {
+        font-weight: bold;
+        color: #17a2b8;
+    }
+  
+    .container {
+        max-width: 900px;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #343a40;
+    }
+
+    .mt-5 {
+        margin-top: 3rem !important;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    .font-weight-bold {
+        font-weight: 700;
+    }
+
+    .shadow-sm {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adding hover effect on the container card */
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+    }
+</style>
